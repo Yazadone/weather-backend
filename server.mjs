@@ -10,7 +10,11 @@ const api = process.env.OpenWeather_API;
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000", 
+      "https://weather-frontend-ut87.onrender.com",
+      "https://weather-backend-iahd.onrender.com",   
+    ],
   })
 );
 app.get("/", (req, res) => {
