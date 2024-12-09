@@ -10,15 +10,9 @@ const api = process.env.OpenWeather_API;
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000", 
-      "https://weather-frontend-ut87.onrender.com",   
-    ],
+    origin: "http://localhost:3000",
   })
 );
-app.get("/", (req, res) => {
-  res.send("Weather backend is running!");
-});
 
 app.get("/api/geo", async (req, res) => {
   const { city } = req.query;
