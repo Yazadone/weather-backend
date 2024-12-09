@@ -13,6 +13,9 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
+app.get("/", (req, res) => {
+  res.send("Weather backend is running!");
+});
 
 app.get("/api/geo", async (req, res) => {
   const { city } = req.query;
