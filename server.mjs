@@ -12,8 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000", 
-      "https://weather-frontend-ut87.onrender.com",
-      "https://weather-backend-iahd.onrender.com",   
+      "https://weather-frontend-ut87.onrender.com",  
     ],
   })
 );
